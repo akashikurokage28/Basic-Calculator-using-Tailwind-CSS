@@ -1,0 +1,13 @@
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Tailwind CSS */
+@import "tailwindcss";
+@theme{
+    --color-primary: #e0e0e0;
+    --color-text: #1c1c1c;
+    --shadow-outer: 2px 2px 5px #bebebe,
+                    -2px -2px 5px #fff;
+    --shadow-inner: inset 2px 2px 5px #bebebe,
+                    inset -2px -2px 5px #fff;
+    --font-inter: Inter;
+}

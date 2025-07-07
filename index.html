@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remixicon CDN Link -->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS Link File-->
+    <link rel="stylesheet" href="./src/output.css">
+
+    <title>Neumorphic Calculator</title>
+</head>
+<body>
+    <!-- Main Container -->
+     <main class="w-full h-svh bg-primary flex items-center justify-center">
+        
+        <!-- Wrapper -->
+         <section class="w-[280px] h-auto shadow-outer rounded-[12px] p-[16px] pt-[24px] pb-[24px]">
+            <h1 class="font-inter text-[1rem] text-purple-700 text-center font-semibold uppercase mb-[24px]">Neumorphic Calculator</h1>
+            <!-- Number Output Container -->
+             <div class="w-full h-[60px] shadow-inner rounded-[8px] overflow-hidden pr-[12px] pl-[12px] mb-[48px]">
+                <input 
+                type="text"
+                id="num-output"
+                class="w-full h-full text-[1.6rem] text-text text-right select-none pointer-events-none placeholder:text-text"
+                placeholder="0"
+                />
+             </div>
+             <!-- Buttons Container -->
+              <div class="grid grid-cols-1 grid-rows-5 gap-4">
+                <!-- Button Row 1 -->
+                <div class="grid grid-cols-4 gap-4 btns-row">
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="AC" 
+                        name="all-clear"
+                        id="all-clear"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="%" 
+                        name="percent"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="DEL" 
+                        name="delete"
+                        id="delete-btn"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="/" 
+                        name="divide"
+                    />
+                </div>
+                <!-- Button Row 2 -->
+                <div class="grid grid-cols-4 gap-4 btns-row">
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="7" 
+                        name="num-7"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="8" 
+                        name="num-8"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="9" 
+                        name="num-9"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="*" 
+                        name="multiply"
+                    />
+                </div>
+                <!-- Button Row 3 -->
+                <div class="grid grid-cols-4 gap-4 btns-row">
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="4" 
+                        name="num-4"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="5" 
+                        name="num-5"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="6" 
+                        name="num-6"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="-" 
+                        name="minus"
+                    />
+                </div>
+                <!-- Button Row 4 -->
+                <div class="grid grid-cols-4 gap-4 btns-row">
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="1" 
+                        name="num-1"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="2" 
+                        name="num-2"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="3" 
+                        name="num-3"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="+" 
+                        name="plus"
+                    />
+                </div>
+                <!-- Button Row 5 -->
+                <div class="grid grid-cols-4 gap-4 btns-row">
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="00" 
+                        name="double-zero"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="0" 
+                        name="num-0"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="." 
+                        name="point"
+                    />
+                    <input 
+                        type="button" 
+                        class="w-[50px] h-[50px] shadow-outer rounded-[30px] cursor-pointer text-[.9rem] font-inter focus:scale-[0.9] focus:shadow-inner focus:text-purple-600" 
+                        value="=" 
+                        name="equals"
+                        id="equal-btn"
+                    />
+                </div>
+              </div>
+         </section>
+     </main>
+     <!-- JavaScript Script File -->
+      <script src="./src/script.js"></script>
+</body>
+</html>
