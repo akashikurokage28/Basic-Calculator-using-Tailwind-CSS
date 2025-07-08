@@ -90,7 +90,7 @@
     border-collapse: collapse;
   }
   :-moz-focusring {
-    outline: auto;
+    outline: none;
   }
   progress {
     vertical-align: baseline;

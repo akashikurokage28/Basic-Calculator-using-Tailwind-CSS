@@ -31,7 +31,8 @@ inputValueBtns.forEach((inputButton) => {
 // Calculates the current number values inside the "numOutput"
 const equalButton = document.getElementById("equal-btn");
 
-equalButton.addEventListener("click", () => {
+equalButton.addEventListener("click", calculate);
+function calculate(){
     try{
         if(numOutput.value.includes("%")){
             // For Calculating Percentages
@@ -44,7 +45,7 @@ equalButton.addEventListener("click", () => {
         numOutput.value = "Syntax Error!";
     }
     lastCalculation = true; //Flag check for last calculation
-});
+}
 
 
 //3.  CONVERT PERCENTAGE INTO DECIMAL POINTS
@@ -61,15 +62,50 @@ function convertPercentToDecimal(){
 
 // Clearing all of the numbers in one click
 const allClearBtn = document.getElementById("all-clear");
-allClearBtn.addEventListener("click", () => {
+allClearBtn.addEventListener("click", allClear);
+function allClear(){
     numOutput.value = "";
-});
+}
 
 
 /* 5. DELETE LAST INPUTTED NUMBER */
 
 //Delete last inputted number
 const deleteBtn = document.getElementById("delete-btn");
-deleteBtn.addEventListener("click", () => {
+deleteBtn.addEventListener("click", deleteLastChar);
+function deleteLastChar(){
     numOutput.value = numOutput.value.slice(0, -1) || "";
+}
+
+
+// Connect keyboard to inputs
+document.addEventListener("keydown", (event) => {
+    inputValueBtns.forEach((inputBtn) => {
+        if(inputBtn.value === event.key){
+            if(!excludeButtons.includes(inputBtn.value)){
+                    if(lastCalculation){
+                    numOutput.value = "";
+                    lastCalculation = false; //Flag check for last calculation
+                }
+                    inputBtn.focus();
+                    numOutput.value += inputBtn.value;
+            }
+        } 
+    });
+
+    switch(event.key){
+        case "Backspace":
+            deleteLastChar();
+            break;
+        
+        case "Control":
+            calculate();
+            break;
+
+        case "Alt":
+            allClear();
+        
+        default:
+    }
+    event.preventDefault();
 });

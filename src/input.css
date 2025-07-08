@@ -9,5 +9,5 @@
                     -2px -2px 5px #fff;
     --shadow-inner: inset 2px 2px 5px #bebebe,
                     inset -2px -2px 5px #fff;
-    --font-inter: Inter;
+    --font-inter: Inter, sans-serif;
 }
